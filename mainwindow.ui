@@ -1,0 +1,1832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1103</width>
+    <height>893</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <family>华文仿宋</family>
+    <pointsize>22</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>数据库兼容性测试工具</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: white;
+    color: white;
+	border-radius:10px;
+}
+ 
+QWidget#tab_4
+{
+	/*background-image:url(:/pic/hfut1.jpg);*/
+}
+/* 设置所有标签的字体和字体大小 */
+/*QLabel {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}*/
+
+QWidget {
+    /*background-image: url(:/pic/bg1.jpg);*/
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+QMainWindow
+{
+	border-radius:100px;
+	color:black;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <family>华文行楷</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::DefaultContextMenu</enum>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/*设置控件的背景*/
+QTabWidget
+{
+    background-color:rgb(104,191,249);
+}
+
+/*设置控件下面板的背景颜色*/
+QTabWidget::pane
+{
+    background-color: rgb(228, 233, 242);
+	/* 设置边框样式和颜色 */
+    border: 1px solid #000000; 
+}
+
+/*设置控件下选择页的颜色*/
+QTabBar::tab
+{
+     background-color: rgb(104,191,249);
+     /*min-width: 60px;
+     min-height: 30px;*/
+     padding: 2px;
+}
+/*设置控件下选择页被选中的颜色*/
+QTabBar::tab:selected
+{
+    /*background-color: rgb(228, 233, 242);*/
+	background-color: black;
+}
+
+
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>首页</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,2">
+          <property name="rightMargin">
+           <number>50</number>
+          </property>
+          <item>
+           <widget class="QGroupBox" name="groupBox_6">
+            <property name="styleSheet">
+             <string notr="true">QGroupBox 
+{
+     border-color: black;
+     border-width: 3px;
+     border-style: solid;
+     margin-top: 0.5ex;
+	 border-radius:10px;
+	 color:black;
+}</string>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_12">
+             <item row="0" column="0">
+              <widget class="QComboBox" name="comboBox">
+               <property name="font">
+                <font>
+                 <family>Times New Roman</family>
+                 <pointsize>12</pointsize>
+                 <weight>50</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox
+{
+	border-radius:3px;
+	background-color:rgba(60,60,60,200);
+	/*font: 75 9pt &quot;Microsoft YaHei&quot;;*/
+    color:rgb(255,255,255);
+    border:0px ;
+	padding-top: 2px;
+	padding-left: 2px;
+}
+QComboBox:disabled
+{
+	background-color:rgba(50,50,50,200);
+	font: 75 9pt &quot;Microsoft YaHei&quot;;
+    color:rgb(160,160,160);
+}
+QComboBox:hover
+{
+	background-color:rgba(45,45,45,200);
+	border:1px solid rgb(31,156,220) ;
+}
+/*点击combox的样式*/
+QComboBox:on
+{
+	border-radius:3px;
+	background-color:rgba(35,35,35);
+	font: 75 9pt &quot;Microsoft YaHei&quot;;
+    color:rgb(255,255,255);
+    border:1px solid rgb(31,156,220) ;
+}
+/*下拉框的样式*/
+QComboBox QAbstractItemView 
+{
+    outline: 0px solid gray;  /*取消选中虚线*/
+    border: 1px solid rgb(31,156,220);  
+    font: 75 9pt &quot;Microsoft YaHei&quot;;
+    color: rgb(255,255,255);
+    background-color: rgb(45,45,45);   
+    selection-background-color: rgb(90,90,90);   
+}
+ /*选中每一项高度*/
+QComboBox QAbstractItemView::item
+ { 
+	height: 25px;  
+ }
+/*选中每一项的字体颜色和背景颜色*/
+QComboBox QAbstractItemView::item:selected 
+{
+    color: rgb(31,163,246);
+	background-color: rgb(90,90,90); 
+}
+ /*下拉箭头的边框*/
+QComboBox::drop-down 
+{
+	border:none;
+}
+ /*下拉箭头样式*/
+QComboBox::down-arrow 
+{
+    right:10px;/*控制箭头左右偏移*/
+    width: 9px;  
+    height: 9px;   
+    image: url(:/Resource/spinbox/combox_up.png);
+}
+ /*下拉箭头点击样式*/
+QComboBox::down-arrow:on
+{
+    width: 9px;  
+    height: 9px;   
+    image: url(:/Resource/spinbox/combox_down.png);
+}</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>actor</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>address</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>category</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>city</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>country</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>customer</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>film</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>film_actor</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>film_category</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>film_text</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>inventory</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>language</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>payment</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>rental</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>staff</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>store</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="pushButton_8">
+               <property name="font">
+                <font>
+                 <family>华文行楷</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+	background-color: white;
+	border:2px groove gray;
+	border-radius:10px;
+	padding:2px 4px;border-style: outset;
+	/*background-image:url(:/pic/bt3.jpg);*/
+	color:black;
+}
+QPushButton:hover
+{
+	background-color:black; 
+	color: white;
+}</string>
+               </property>
+               <property name="text">
+                <string>查询</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,2,3">
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="TitleScroll" name="label_9">
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="textBrowser_3">
+              <property name="font">
+               <font>
+                <family>华文仿宋</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QTextEdit
+{
+	background-color:black;
+}</string>
+              </property>
+              <property name="html">
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'华文仿宋'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;考虑到并不影响兼容性的检测结果，请使用我们提供的表进行测试&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;测试采用的是经典的数据库表sakila&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;具体的字段信息可以在左侧查询或者参考官方文档&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;该测试工具仅作为在数据库兼容性测试上的一种探索，实际使用还需要完善更多的细节&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,0,1">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QTextBrowser" name="textBrowser_5">
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QTextEdit
+{
+	background-color:black;
+}</string>
+                </property>
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Times New Roman'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Type&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTextBrowser" name="textBrowser_4">
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QTextEdit
+{
+	background-color:black;
+}</string>
+                </property>
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Times New Roman'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Field&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTextBrowser" name="textBrowser_6">
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QTextEdit
+{
+	background-color:black;
+}</string>
+                </property>
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Times New Roman'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <property name="font">
+        <font>
+         <family>华文仿宋</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <attribute name="title">
+        <string>控制</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,2,1">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="font">
+             <font>
+              <family>华文行楷</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QGroupBox 
+{
+     border-color: black;
+     border-width: 3px;
+     border-style: solid;
+     margin-top: 0.5ex;
+	 border-radius:10px;
+	 color:black;
+}
+
+
+</string>
+            </property>
+            <property name="title">
+             <string>连接工具</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_11">
+               <property name="font">
+                <font>
+                 <family>宋体</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel
+{
+	color:black;
+}</string>
+               </property>
+               <property name="text">
+                <string>状态</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QRadioButton" name="radioButton">
+               <property name="font">
+                <font>
+                 <family>宋体</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QRadioButton
+{
+	color:black;
+}
+
+QRadioButton::indicator {
+    width:                  10px;
+    height:                 10px;
+    border-radius:          7px;
+}
+ 
+QRadioButton::indicator:checked {
+    background-color:       green;
+    border:                 2px solid white;
+}
+ 
+QRadioButton::indicator:unchecked {
+    background-color:       red;
+    border:                 2px solid white;
+}</string>
+               </property>
+               <property name="text">
+                <string>连接</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QRadioButton" name="radioButton_2">
+               <property name="font">
+                <font>
+                 <family>宋体</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QRadioButton
+{
+	color:black;
+}
+
+QRadioButton::indicator {
+    width:                  10px;
+    height:                 10px;
+    border-radius:          7px;
+}
+ 
+QRadioButton::indicator:checked {
+    background-color:       green;
+    border:                 2px solid white;
+}
+ 
+QRadioButton::indicator:unchecked {
+    background-color:       red;
+    border:                 2px solid white;
+}</string>
+               </property>
+               <property name="text">
+                <string>断开</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="pushButton">
+               <property name="minimumSize">
+                <size>
+                 <width>90</width>
+                 <height>90</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>90</width>
+                 <height>90</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>华文仿宋</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+	background-color: lightblue;
+	border:2px groove gray;
+	border-radius:45px;
+	padding:2px 4px;border-style: outset;
+	color:black;
+	/*background-image: url(:/pic/start.jpg)*/
+}
+QPushButton:hover
+{
+	background-color:black; 
+	color: white;
+}
+/*
+QPushButton:pressed
+{
+	background-color:red;
+	border-style: inset;
+}*/</string>
+               </property>
+               <property name="text">
+                <string>连接</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1" colspan="2">
+              <widget class="QPushButton" name="pushButton_5">
+               <property name="minimumSize">
+                <size>
+                 <width>90</width>
+                 <height>90</height>
+                </size>
+               </property>
+               <property name="sizeIncrement">
+                <size>
+                 <width>90</width>
+                 <height>90</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>华文仿宋</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+	background-color: lightblue;
+	border:2px groove gray;
+	border-radius:45px;
+	padding:2px 4px;border-style: outset;
+	color:black;
+	/*background-image: url(:/pic/close.jpg)*/
+}
+QPushButton:hover
+{
+	background-color:black; 
+	color: white;
+}
+/*
+QPushButton:pressed
+{
+	background-color:red;
+	border-style: inset;
+}*/</string>
+               </property>
+               <property name="text">
+                <string>断开</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="font">
+             <font>
+              <family>华文行楷</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QGroupBox 
+{
+     border-color: black;
+     border-width: 3px;
+     border-style: solid;
+     margin-top: 0.5ex;
+	 border-radius:20px;
+     color:black;
+}</string>
+            </property>
+            <property name="title">
+             <string>自动测试</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="3" column="1">
+              <widget class="QPushButton" name="pushButton_3">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>70</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>70</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>华文仿宋</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+	background-color: lightblue;
+	border:2px groove gray;
+	border-radius:10px;
+	padding:2px 4px;border-style: outset;
+	color:black;
+	/*background-image:url(:/pic/bt3.jpg);*/
+}
+QPushButton:hover
+{
+	background-color:black; 
+	color: white;
+}
+/*
+QPushButton:pressed
+{
+	background-color:red;
+	border-style: inset;
+}*/</string>
+               </property>
+               <property name="text">
+                <string>语法</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_10">
+               <property name="font">
+                <font>
+                 <family>华文行楷</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel
+{
+	color:black;
+}</string>
+               </property>
+               <property name="text">
+                <string>测试语句数量</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QPushButton" name="pushButton_2">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>70</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>70</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>华文仿宋</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+	background-color: lightblue;
+	border:2px groove gray;
+	border-radius:10px;
+	padding:2px 4px;border-style: outset;
+	/*background-image:url(:/pic/bt3.jpg);*/
+	color:black;
+}
+QPushButton:hover
+{
+	background-color:black; 
+	color: white;
+}
+
+/*
+QPushButton:pressed
+{
+	background-color:red;
+	border-style: inset;
+}*/</string>
+               </property>
+               <property name="text">
+                <string>数据类型</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QComboBox" name="comboBox_2">
+               <property name="font">
+                <font>
+                 <family>Times New Roman</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox
+{
+	border-radius:3px;
+	background-color:rgba(60,60,60,200);
+	/*font: 75 9pt &quot;Microsoft YaHei&quot;;*/
+    color:rgb(255,255,255);
+    border:0px ;
+	padding-top: 2px;
+	padding-left: 2px;
+}
+QComboBox:disabled
+{
+	background-color:rgba(50,50,50,200);
+	font: 75 9pt &quot;Microsoft YaHei&quot;;
+    color:rgb(160,160,160);
+}
+QComboBox:hover
+{
+	background-color:rgba(45,45,45,200);
+	border:1px solid rgb(31,156,220) ;
+}
+/*点击combox的样式*/
+QComboBox:on
+{
+	border-radius:3px;
+	background-color:rgba(35,35,35);
+	font: 75 9pt &quot;Microsoft YaHei&quot;;
+    color:rgb(255,255,255);
+    border:1px solid rgb(31,156,220) ;
+}
+/*下拉框的样式*/
+QComboBox QAbstractItemView 
+{
+    outline: 0px solid gray;  /*取消选中虚线*/
+    border: 1px solid rgb(31,156,220);  
+    font: 75 9pt &quot;Microsoft YaHei&quot;;
+    color: rgb(255,255,255);
+    background-color: rgb(45,45,45);   
+    selection-background-color: rgb(90,90,90);   
+}
+ /*选中每一项高度*/
+QComboBox QAbstractItemView::item
+ { 
+	height: 25px;  
+ }
+/*选中每一项的字体颜色和背景颜色*/
+QComboBox QAbstractItemView::item:selected 
+{
+    color: rgb(31,163,246);
+	background-color: rgb(90,90,90); 
+}
+ /*下拉箭头的边框*/
+QComboBox::drop-down 
+{
+	border:none;
+}
+ /*下拉箭头样式*/
+QComboBox::down-arrow 
+{
+    right:10px;/*控制箭头左右偏移*/
+    width: 9px;  
+    height: 9px;   
+    image: url(:/Resource/spinbox/combox_up.png);
+}
+ /*下拉箭头点击样式*/
+QComboBox::down-arrow:on
+{
+    width: 9px;  
+    height: 9px;   
+    image: url(:/Resource/spinbox/combox_down.png);
+}</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>10</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>20</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>50</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>100</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>500</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>1000</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_4">
+            <property name="font">
+             <font>
+              <family>华文行楷</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QGroupBox 
+{
+	border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    margin-top: 0.5ex;
+	border-radius:20px;	
+	color:black;
+}</string>
+            </property>
+            <property name="title">
+             <string>辅助工具</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="0">
+              <widget class="QPushButton" name="pushButton_4">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>华文仿宋</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+	background-color: lightblue;
+	border:2px groove gray;
+	border-radius:50px;
+	color:black;
+	padding:2px 4px;border-style: outset;
+}
+QPushButton:hover
+{
+	background-color:black; 
+	color: white;
+}
+/*
+QPushButton:pressed
+{
+	background-color:red;
+	border-style: inset;
+}*/</string>
+               </property>
+               <property name="text">
+                <string>清空</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QGroupBox" name="groupBox_5">
+            <property name="font">
+             <font>
+              <family>华文行楷</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QGroupBox 
+{
+     border-color: black;
+     border-width: 3px;
+     border-style: solid;
+     margin-top: 0.5ex;
+	 border-radius:10px;
+	 color:black;
+}
+
+</string>
+            </property>
+            <property name="title">
+             <string>手动测试</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_5">
+             <item row="0" column="0">
+              <widget class="QPushButton" name="pushButton_7">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>华文仿宋</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+	background-color: lightblue;
+	border:2px groove gray;
+	border-radius:50px;
+	color:black;
+	padding:2px 4px;border-style: outset;
+}
+QPushButton:hover
+{
+	background-color:black; 
+	color: white;
+}
+/*
+QPushButton:pressed
+{
+	background-color:red;
+	border-style: inset;
+}*/</string>
+               </property>
+               <property name="text">
+                <string>测试</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QTextEdit" name="textEdit">
+               <property name="font">
+                <font>
+                 <family>Times New Roman</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QTextEdit
+{
+	background-color:black;
+}</string>
+               </property>
+               <property name="html">
+                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Times New Roman'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;use sakila;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="font">
+             <font>
+              <family>华文行楷</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QGroupBox 
+{
+     border-color: black;
+     border-width: 2px;
+     border-style: solid;
+     margin-top: 0.5ex;
+	color:black;
+}</string>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_6">
+             <item row="0" column="0">
+              <widget class="QTextBrowser" name="textBrowser">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>仿宋</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QTextBrowser#textBrowser{
+	background-color:black;
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>显示</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_10">
+        <item row="0" column="0">
+         <widget class="QToolBox" name="toolBox">
+          <property name="font">
+           <font>
+            <family>华文行楷</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">/*改变字体颜色*/
+
+QToolBox::tab
+{
+	color:black;
+}
+
+QProgressBar
+{
+	border-radius:5px;
+	text-align:center;
+	color:black;
+	border:1px solid #E8EDF2;
+	background-color:white;
+	border-color: rgb(180, 180, 180);
+}
+
+QProgressBar:chunk
+{
+	border-radius:5px;
+	background-color:#1ABC9C;
+}
+
+QLabel
+{
+	color:black;
+}
+</string>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="page">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1065</width>
+             <height>721</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <attribute name="label">
+            <string>数据类型</string>
+           </attribute>
+           <widget class="QProgressBar" name="progressBar">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>60</y>
+              <width>431</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="value">
+             <number>24</number>
+            </property>
+            <property name="textDirection">
+             <enum>QProgressBar::BottomToTop</enum>
+            </property>
+           </widget>
+           <widget class="QProgressBar" name="progressBar_2">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>160</y>
+              <width>431</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="value">
+             <number>24</number>
+            </property>
+           </widget>
+           <widget class="QProgressBar" name="progressBar_4">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>380</y>
+              <width>431</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="value">
+             <number>24</number>
+            </property>
+           </widget>
+           <widget class="QProgressBar" name="progressBar_3">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>270</y>
+              <width>431</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="value">
+             <number>24</number>
+            </property>
+           </widget>
+           <widget class="QProgressBar" name="progressBar_5">
+            <property name="geometry">
+             <rect>
+              <x>490</x>
+              <y>60</y>
+              <width>471</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="value">
+             <number>24</number>
+            </property>
+           </widget>
+           <widget class="QProgressBar" name="progressBar_6">
+            <property name="geometry">
+             <rect>
+              <x>490</x>
+              <y>160</y>
+              <width>471</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="value">
+             <number>24</number>
+            </property>
+           </widget>
+           <widget class="QProgressBar" name="progressBar_7">
+            <property name="geometry">
+             <rect>
+              <x>490</x>
+              <y>270</y>
+              <width>471</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="value">
+             <number>24</number>
+            </property>
+           </widget>
+           <widget class="QProgressBar" name="progressBar_8">
+            <property name="geometry">
+             <rect>
+              <x>490</x>
+              <y>380</y>
+              <width>471</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="value">
+             <number>24</number>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>101</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>TINYINT</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_2">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>130</y>
+              <width>111</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>SMALLINT</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_3">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>240</y>
+              <width>51</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>INT</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_4">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>350</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>BOOL</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_5">
+            <property name="geometry">
+             <rect>
+              <x>500</x>
+              <y>20</y>
+              <width>81</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>FLOAT</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_6">
+            <property name="geometry">
+             <rect>
+              <x>500</x>
+              <y>130</y>
+              <width>91</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>DOUBLE</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_7">
+            <property name="geometry">
+             <rect>
+              <x>500</x>
+              <y>240</y>
+              <width>71</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>CHAR</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_8">
+            <property name="geometry">
+             <rect>
+              <x>500</x>
+              <y>350</y>
+              <width>111</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>VARCHAR</string>
+            </property>
+           </widget>
+           <widget class="QTextBrowser" name="textBrowser_7">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>460</y>
+              <width>941</width>
+              <height>71</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>华文仿宋</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTextBrowser
+{
+	background-color:black;
+}</string>
+            </property>
+            <property name="html">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'华文仿宋'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1065</width>
+             <height>721</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>语法</string>
+           </attribute>
+           <widget class="QProgressBar" name="progressBar_9">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>20</y>
+              <width>851</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="value">
+             <number>24</number>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_6">
+            <property name="geometry">
+             <rect>
+              <x>870</x>
+              <y>0</y>
+              <width>90</width>
+              <height>90</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	background-color: lightblue;
+	border:2px groove gray;
+	border-radius:45px;
+	padding:2px 4px;border-style: outset;
+	background-image: url(:/pic/save.jpg)
+}
+QPushButton:hover
+{
+	background-color:lightgreen; 
+	color: black;
+}
+QPushButton:pressed
+{
+	background-color:red;
+	border-style: inset;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QTableWidget" name="tableWidget">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>130</y>
+              <width>991</width>
+              <height>391</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTableWidget::item
+{
+	color:black;
+}
+QTableWidget::item:hover
+{
+	background-color:rgb(92,188,227,200)
+}
+QTableWidget::item:selected
+{
+	background-color:#1B89A1
+}
+QHeaderView::section,QTableCornerButton:section
+{ 
+    padding:3px; 
+    margin:0px; 
+    color:#DCDCDC;  
+    border:1px solid #242424;
+    border-left-width:0px;
+	border-right-width:1px; 
+	border-top-width:0px; 
+	border-bottom-width:1px;		                background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #646464,stop:1 #525252); 
+}
+QTableWidget{background-color:white;border:none;}
+</string>
+            </property>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>180</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>80</number>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>1</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>2</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>3</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>4</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>5</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>6</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>7</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>8</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>9</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>10</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>常见语法点</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>类型</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>MYSQL</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>SQLSERVER</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>备注</string>
+             </property>
+            </column>
+            <item row="0" column="0">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>日志</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_8">
+          <item row="0" column="0">
+           <widget class="QTextBrowser" name="textBrowser_2">
+            <property name="font">
+             <font>
+              <family>仿宋</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTextBrowser#textBrowser_2{
+	background-color:black;
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TitleScroll</class>
+   <extends>QLabel</extends>
+   <header>titlescroll.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

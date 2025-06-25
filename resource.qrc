@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pic/bg1.jpg</file>
+        <file>pic/bt1.jpg</file>
+        <file>pic/hfut.jpg</file>
+        <file>pic/hfut1.jpg</file>
+        <file>pic/bt2.jpg</file>
+        <file>pic/bt3.jpg</file>
+        <file>pic/icon.jpg</file>
+        <file>pic/eye.jpg</file>
+        <file>pic/close.jpg</file>
+        <file>pic/start.jpg</file>
+        <file>pic/save.jpg</file>
+    </qresource>
+</RCC>

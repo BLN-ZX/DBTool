@@ -1,0 +1,36 @@
+#include "mysql.h"
+
+mysql_conn::mysql_conn()
+{
+    // 连接mysql,如果mysql已经存在了相应数据库的名字，则可以setDatabaseName再open打开连接数据库
+    // 如果没有，想要系统去创建数据库，则setDatabaseName不要设置，open打开时这样连接不上,因为没有相应数据库
+    // 而是先连接上mysql，通过命令创建数据库，再通过命令使用相应数据库，切换到该数据库上面
+    db = QSqlDatabase::addDatabase("QMYSQL");
+    db.setHostName("localhost"); // 输入连接的数据库IP
+    db.setPort(3306); // 输入连接的数据库端口
+    db.setUserName("root"); //输入连接的用户名
+    db.setPassword("2023@hfut"); //输入连接的密码
+    if(db.open())
+    {
+        QString databaseName = "infosystem";
+        db.setDatabaseName(databaseName); // 数据库名称
+        qDebug()<<"打开数据库成功";
+        QSqlQuery query;
+        if(query.exec("create database "+databaseName + " DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci")) {
+            qDebug()<<"创建数据库"+databaseName+"成功";
+        } else 
+        {
+            qDebug()<<"创建数据库"+databaseName+"失败";
+        }
+
+        if(query.exec("use "+databaseName)) {
+            qDebug()<<"使用数据库"+databaseName+"成功";
+        } else 
+        {
+            qDebug()<<"使用数据库"+databaseName+"失败";
+        }
+    } else 
+    {
+        qDebug()<<"打开数据库失败";
+    }
+}
